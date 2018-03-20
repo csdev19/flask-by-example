@@ -4,7 +4,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hola Allison :v"
+	return "Hola Allison :v"
+
+@app.route('/<name>')
+def hello_name():
+	return "Holla {}!".format(name)
+
 
 if __name__ == '__main__':
-    app.run()
+	app.run()
